@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.container {
+    @apply max-[1920px]:max-w-[1220px] mx-auto
+}
+
+@layer components {
+    .nav_link-active {
+        @apply font-medium text-lightGreen relative after:w-full after:absolute after:transition-all after:duration-300 after:left-0 after:-bottom-1 after:h-[2px] after:bg-lightGreen;
+    }
+
+    .nav_link {
+        @apply relative transition-all duration-300 hover:text-lightGreen hover:after:w-full after:absolute after:transition-all after:duration-300 after:w-0 after:left-0 after:-bottom-1 after:h-[2px] after:bg-lightGreen;
+    }
+    .program_btn-active {
+        @apply grow flex items-center justify-center bg-lightGreen rounded-full py-4 font-bold lg:text-[25px] text-sm text-milk shadow-[0px_0px_40px_rgba(86,86,86,0.3)];
+    }
+    .program_btn {
+        @apply grow flex items-center justify-center bg-[#DEE6EE] rounded-full py-4 font-bold lg:text-[25px] text-sm text-black;
+    }
+    .set-trigger_active {
+        @apply text-lightGreen;
+    }
+    .set-trigger_nonactive {
+        @apply text-black;
+    }
+    .set-trigger-spec_active {
+        @apply text-lightGreen;
+    }
+    .set-trigger-spec_nonactive {
+        @apply text-black;
+    }
+    .days-active {
+        @apply text-lightGreen;
+    }
+    .days-noactive {
+        @apply text-black;
+    }
+}

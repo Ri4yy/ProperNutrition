@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/ProperNutrition/src/assets/css/custom.css">
+    <link rel="stylesheet" href="/ProperNutrition/src/css/main.css" />
+    <title>Магазин описание</title>
+</head>
+
+<body class="bg-milk font-montserrat relative">
+    <div class="lg:flex hidden absolute -top-[350px] -right-[200px] z-30">
+        <div class="w-[640px] h-[640px] bg-lightGreen rounded-full shadow-[0px_0px_40px_rgba(86,86,86,0.4)]"></div>
+    </div>
+    <header class="container flex lg:gap-x-5 md:gap-x-[10px] mt-[52px]">
+        <!-- Бургер-меню -->
+        <div class="hidden flex flex-col text-white absolute py-5 px-8 rounded-bl-[50px] rounded-br-[50px] bg-milk h-fit top-0 left-0 w-full z-40" id="menu">
+            <nav>
+                <ul class="flex flex-col gap-y-5 font-comfortaa font-bold text-black text-base mt-10">
+                    <li><a href="/ProperNutrition/index.html" class="nav_link">Програмы питания</a></li>
+                    <li><a href="/ProperNutrition/pages/lunch.html" class="nav_link">Бизнес-ланчи</a></li> 
+                    <li><a href="/ProperNutrition/pages/shop.html" class="nav_link">Gastro Shop</a></li>
+                    <li><a href="/ProperNutrition/pages/about.html" class="nav_link">О нас</a></li>
+                    <li><a href="/ProperNutrition/pages/blog.html" class="nav_link">Блог</a></li>
+                    <li><a href="#" class="nav_link"
+                        data-te-toggle="modal"
+                        data-te-target="#cartModal"
+                        data-te-ripple-init
+                        data-te-ripple-color="light"
+                        >Корзина</a></li>
+                    <li><a href="#" class="nav_link" 
+                        data-te-dropdown-item-ref
+                        data-te-toggle="modal"
+                        data-te-target="#signinModal"
+                        data-te-ripple-init
+                        data-te-ripple-color="light"
+                        >Вход</a></li>
+                    <li><a href="#" class="nav_link"
+                        data-te-dropdown-item-ref
+                        data-te-toggle="modal"
+                        data-te-target="#regModal"
+                        data-te-ripple-init
+                        data-te-ripple-color="light"
+                        >Регистрация</a>
+                    </li>
+                </ul>
+            </nav>
+            <a href="tel:+38(068)9494919" class="mt-[30px] flex items-center justify-center w-full font-bold py-3 xl:text-xl lg:text-sm md:text-[10px] rounded-full bg-lightGreen text-milk">+38 (068) 949 - 49 -19</a>
+        </div>
+        <div class="rounded-full w-full bg-milk py-4 shadow-[0px_0px_40px_rgba(86,86,86,0.3)] relative md:z-30">
+            <div class="flex flex-col items-center justify-center xl:w-[264px] lg:w-[200px] md:w-[150px] w-[100px] xl:h-[264px] lg:h-[200px] md:h-[150px] h-[100px] top-1/2 -translate-y-1/2 xl:-left-10 absolute bg-milk rounded-full shadow-[0px_0px_40px_rgba(86,86,86,0.3)] z-30">
+                <a href="/ProperNutrition/index.html" class="flex flex-col items-center">
+                    <img src="/ProperNutrition/src/assets/img/icon/logo.png" alt="">
+                    <span class="md:text-sm text-[8px] text-[#020202] md:-mt-4 font-comfortaa">healthy ration</span>
+                </a>
+            </div>
+            <nav>
+                <ul class="md:flex hidden lg:gap-10 md:gap-5 text-[#020202] xl:text-sm lg:text-xs md:text-[8px] lg:pr-10 md:pr-[30px] xl:pl-[268px] lg:pl-[220px] md:pl-[154px] whitespace-nowrap">
+                    <li><a href="/ProperNutrition/index.html" class="nav_link">Програмы питания</a></li>
+                    <li><a href="/ProperNutrition/pages/lunch.html" class="nav_link">Бизнес-ланчи</a></li> 
+                    <li><a href="/ProperNutrition/pages/shop.html" class="nav_link">Gastro Shop</a></li>
+                    <li><a href="/ProperNutrition/pages/about.html" class="nav_link">О нас</a></li>
+                    <li><a href="/ProperNutrition/pages/blog.html" class="nav_link">Блог</a></li>
+                </ul>
+            </nav>
+            <div class="w-16 h-16 z-50 flex md:hidden items-center justify-center rounded-full bg-milk absolute top-1/2 -translate-y-1/2 right-0 shadow-[0px_0px_40px_rgba(86,86,86,0.3)]">
+                <img src="/ProperNutrition/src/assets/img/icon/menu.png" alt="" id="openMenu">
+            </div>
+        </div>
+        <div class="md:flex hidden justify-center items-center rounded-full w-full bg-milk shadow-[0px_0px_40px_rgba(86,86,86,0.3)] md:z-30">
+            <a href="tel:+38(068)9494919" class="font-bold xl:text-xl lg:text-sm md:text-[10px] text-lightGreen nav_link hover:text-[#24c024] transition-all duration-300">+38 (068) 949 - 49 -19</a>
+        </div>
+    </header>
+
+    <div class="hidden h-screen w-full z-30 bg-[#272525]/80 absolute top-0 left-0" id="overlay"></div>
+
+    <section class="pt-[50px] pb-20 lg:mt-[70px] md:mt-10 mt-[30px] text-milk font-comfortaa overflow-hidden bg-[#020202]/70 shadow-[inset_0px_0px_30px_rgba(86,86,86,0.25)] relative">
+        <img src="/ProperNutrition/src/assets/img/shop/candyBan1.png" alt="" class="absolute -z-10 bottom-0 lg:left-[calc((100%-1300px)/2)] md:-left-[200px] -left-[100px]">
+        <img src="/ProperNutrition/src/assets/img/shop/candyBan2.png" alt="" class="lg:flex hidden absolute -z-10 bottom-10 right-0">
+        <div class="container flex flex-col items-center">
+            <h2 class="lg:text-[25px] md:text-xl text-lg font-bold">Полезные конфеты</h2>
+            <p class="lg:text-lg md:text-xs text-[10px] lg:mt-[30px] md:mt-5 mt-[10px] text-center">
+                Представляем сладкую коллекцию полезных конфет. Созданы с любовью и изготовлены 
+                из натуральных продуктов без добавления сахара - с заботой о вас и ваших близких!
+            </p>
+            <p class="lg:text-lg md:text-xs text-[10px] lg:mt-[30px] md:mt-5 mt-[10px] text-center">
+                Стоимость доставки 60 руб по предварительному заказу (за 1 сутки).
+                Предварительный заказ предполагает доставку на следующий день с 6:00-10:00.
+                Минимальный заказ - от 6 конфет. Вес 1 кофетки 25 г.
+            </p>
+            <p class="lg:text-lg md:text-xs text-[10px] lg:mt-[30px] md:mt-5 mt-[10px] text-center">
+                Заказы "на завтра" принимаются до 11-00 текущего дня.
+            </p>
+            <p class="lg:text-lg md:text-xs text-[10px] lg:mt-[30px] md:mt-5 mt-[10px] text-center">
+                Конфеты доставляются в прозрачных пакетах со стикером. Вы можете заказать 
+                подарочный бокс с лентой стоимостью 20 руб
+            </p>
+        </div>
+    </section>
+
+    <section class="container flex flex-col lg:mt-[50px] md:mt-5 mt-[30px] mb-[100px]">
+        <div class="flex justify-between items-center">
+            <a href="#" class="flex items-center gap-x-[15px]">
+                <div class="flex justify-center items-center w-[30px] h-[30px] bg-[#DEE6EE] rounded-full">
+                    <svg width="9" height="16" viewBox="0 0 9 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0.292893 7.29289C-0.097631 7.68342 -0.097631 8.31658 0.292893 8.70711L6.65685 15.0711C7.04738 15.4616 7.68054 15.4616 8.07107 15.0711C8.46159 14.6805 8.46159 14.0474 8.07107 13.6569L2.41421 8L8.07107 2.34315C8.46159 1.95262 8.46159 1.31946 8.07107 0.928932C7.68054 0.538408 7.04738 0.538408 6.65685 0.928932L0.292893 7.29289ZM2 7H1V9H2V7Z" fill="#020202"/>
+                    </svg>
+                </div>
+                <span class="lg:text-lg text-[10px] font-bold text-black font-comfortaa">Назад</span>
+            </a>
+            <button class="flex justify-center border-[2px] border-lightGreen hover:bg-transparent hover:text-lightGreen transition-all duration-300 lg:text-[25px] text-xs px-[35px] lg:py-4 py-2 text-milk font-bold rounded-full bg-lightGreen">Оформить заказ</button>
+        </div>
+        <div class="grid md:grid-cols-2 lg:gap-x-5 lg:gap-y-[60px] md:gap-x-[30px] md:gap-y-10 gap-y-[30px] mt-[30px]">
+            <div class="flex flex-col">
+                <img src="/ProperNutrition/src/assets/img/shop/card.png" alt="" class="w-full object-cover rounded-[30px] shadow-[0px_0px_20px_rgba(86,86,86,0.5)]">
+                <span class="font-bold lg:text-lg text-[10px] font-comfortaa lg:mt-[30px] mt-[15px]">Имбирные конфеты с апельсином</span>
+                <p class="lg:text-sm md:text-[10px] text-[8px] lg:mt-5 mt-[10px]"><span class="font-medium">Состав:</span> Подсушенный миндаль, медовые финики, пряный имбирь, апельсин, миндальные лепестки.<span class="font-medium"> Не содержат сахара!</span></p>
+                <ul class="flex lg:gap-x-[30px] gap-x-2 font-bold font-comfortaa lg:text-lg md:text-sm text-[10px] mt-[10px]">
+                    <li>Белки - 8</li>
+                    <li>Жиры - 20</li>
+                    <li>Углеводы - 36</li>
+                    <li>346 ккал</li>
+                </ul>
+                <div class="flex items-center justify-between w-full lg:mt-7 mt-[15px]">
+                    <div class="flex gap-x-[26px] items-center">
+                        <div class="flex lg:gap-x-4 gap-x-[10px]">
+                            <button class="countMinus flex justify-center items-center w-[30px] h-[30px] rounded-full bg-[#DEE6EE]">-</button>
+                            <input type="text" id="qty" value="1" class="qty font-bold text-center bg-transparent text-lightGreen lg:text-xl md:text-xs max-w-[40px] outline-none">
+                            <button class="countPlus flex justify-center items-center w-[30px] h-[30px] rounded-full bg-[#DEE6EE]">+</button>
+                        </div>
+                        <div class="text-lightGreen font-bold lg:text-xl md:text-xs">
+                            26 руб / 1 шт
+                        </div>
+                    </div>
+                    <a href="#" class="group justify-items-end hover:bg-lightGreen transition-all duration-300 flex justify-center items-center w-10 h-10 rounded-full bg-[#DEE6EE]">
+                        <svg width="20" height="19" class="fill-black group-hover:fill-milk transition-all duration-300" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M10 0C11.5913 0 13.1174 0.632141 14.2426 1.75736C15.3679 2.88258 16 4.4087 16 6V7H20V9H18.833L18.076 18.083C18.0552 18.3329 17.9413 18.5658 17.7568 18.7357C17.5723 18.9055 17.3308 18.9999 17.08 19H2.92C2.66925 18.9999 2.4277 18.9055 2.24322 18.7357C2.05875 18.5658 1.94481 18.3329 1.924 18.083L1.166 9H0V7H4V6C4 4.4087 4.63214 2.88258 5.75736 1.75736C6.88258 0.632141 8.4087 0 10 0ZM16.826 9H3.173L3.84 17H16.159L16.826 9ZM11 11V15H9V11H11ZM7 11V15H5V11H7ZM15 11V15H13V11H15ZM10 2C8.97376 2 7.98677 2.39444 7.24319 3.10172C6.4996 3.80901 6.05631 4.77504 6.005 5.8L6 6V7H14V6C14 4.97376 13.6056 3.98677 12.8983 3.24319C12.191 2.4996 11.225 2.05631 10.2 2.005L10 2Z"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            <div class="flex flex-col">
+                <img src="/ProperNutrition/src/assets/img/shop/card.png" alt="" class="w-full object-cover rounded-[30px] shadow-[0px_0px_20px_rgba(86,86,86,0.5)]">
+                <span class="font-bold lg:text-lg text-[10px] font-comfortaa lg:mt-[30px] mt-[15px]">Имбирные конфеты с апельсином</span>
+                <p class="lg:text-sm md:text-[10px] text-[8px] lg:mt-5 mt-[10px]"><span class="font-medium">Состав:</span> Подсушенный миндаль, медовые финики, пряный имбирь, апельсин, миндальные лепестки.<span class="font-medium"> Не содержат сахара!</span></p>
+                <ul class="flex lg:gap-x-[30px] gap-x-2 font-bold font-comfortaa lg:text-lg md:text-sm text-[10px] mt-[10px]">
+                    <li>Белки - 8</li>
+                    <li>Жиры - 20</li>
+                    <li>Углеводы - 36</li>
+                    <li>346 ккал</li>
+                </ul>
+                <div class="flex items-center justify-between w-full lg:mt-7 mt-[15px]">
+                    <div class="flex gap-x-[26px] items-center">
+                        <div class="flex lg:gap-x-4 gap-x-[10px]">
+                            <button class="countMinus flex justify-center items-center w-[30px] h-[30px] rounded-full bg-[#DEE6EE]">-</button>
+                            <input type="text" id="qty" value="1" class="qty font-bold text-center bg-transparent text-lightGreen lg:text-xl md:text-xs max-w-[40px] outline-none">
+                            <button class="countPlus flex justify-center items-center w-[30px] h-[30px] rounded-full bg-[#DEE6EE]">+</button>
+                        </div>
+                        <div class="text-lightGreen font-bold lg:text-xl md:text-xs">
+                            26 руб / 1 шт
+                        </div>
+                    </div>
+                    <a href="#" class="group justify-items-end hover:bg-lightGreen transition-all duration-300 flex justify-center items-center w-10 h-10 rounded-full bg-[#DEE6EE]">
+                        <svg width="20" height="19" class="fill-black group-hover:fill-milk transition-all duration-300" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M10 0C11.5913 0 13.1174 0.632141 14.2426 1.75736C15.3679 2.88258 16 4.4087 16 6V7H20V9H18.833L18.076 18.083C18.0552 18.3329 17.9413 18.5658 17.7568 18.7357C17.5723 18.9055 17.3308 18.9999 17.08 19H2.92C2.66925 18.9999 2.4277 18.9055 2.24322 18.7357C2.05875 18.5658 1.94481 18.3329 1.924 18.083L1.166 9H0V7H4V6C4 4.4087 4.63214 2.88258 5.75736 1.75736C6.88258 0.632141 8.4087 0 10 0ZM16.826 9H3.173L3.84 17H16.159L16.826 9ZM11 11V15H9V11H11ZM7 11V15H5V11H7ZM15 11V15H13V11H15ZM10 2C8.97376 2 7.98677 2.39444 7.24319 3.10172C6.4996 3.80901 6.05631 4.77504 6.005 5.8L6 6V7H14V6C14 4.97376 13.6056 3.98677 12.8983 3.24319C12.191 2.4996 11.225 2.05631 10.2 2.005L10 2Z"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            <div class="flex flex-col">
+                <img src="/ProperNutrition/src/assets/img/shop/card.png" alt="" class="w-full object-cover rounded-[30px] shadow-[0px_0px_20px_rgba(86,86,86,0.5)]">
+                <span class="font-bold lg:text-lg text-[10px] font-comfortaa lg:mt-[30px] mt-[15px]">Имбирные конфеты с апельсином</span>
+                <p class="lg:text-sm md:text-[10px] text-[8px] lg:mt-5 mt-[10px]"><span class="font-medium">Состав:</span> Подсушенный миндаль, медовые финики, пряный имбирь, апельсин, миндальные лепестки.<span class="font-medium"> Не содержат сахара!</span></p>
+                <ul class="flex lg:gap-x-[30px] gap-x-2 font-bold font-comfortaa lg:text-lg md:text-sm text-[10px] mt-[10px]">
+                    <li>Белки - 8</li>
+                    <li>Жиры - 20</li>
+                    <li>Углеводы - 36</li>
+                    <li>346 ккал</li>
+                </ul>
+                <div class="flex items-center justify-between w-full lg:mt-7 mt-[15px]">
+                    <div class="flex gap-x-[26px] items-center">
+                        <div class="flex lg:gap-x-4 gap-x-[10px]">
+                            <button class="countMinus flex justify-center items-center w-[30px] h-[30px] rounded-full bg-[#DEE6EE]">-</button>
+                            <input type="text" id="qty" value="1" class="qty font-bold text-center bg-transparent text-lightGreen lg:text-xl md:text-xs max-w-[40px] outline-none">
+                            <button class="countPlus flex justify-center items-center w-[30px] h-[30px] rounded-full bg-[#DEE6EE]">+</button>
+                        </div>
+                        <div class="text-lightGreen font-bold lg:text-xl md:text-xs">
+                            26 руб / 1 шт
+                        </div>
+                    </div>
+                    <a href="#" class="group justify-items-end hover:bg-lightGreen transition-all duration-300 flex justify-center items-center w-10 h-10 rounded-full bg-[#DEE6EE]">
+                        <svg width="20" height="19" class="fill-black group-hover:fill-milk transition-all duration-300" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M10 0C11.5913 0 13.1174 0.632141 14.2426 1.75736C15.3679 2.88258 16 4.4087 16 6V7H20V9H18.833L18.076 18.083C18.0552 18.3329 17.9413 18.5658 17.7568 18.7357C17.5723 18.9055 17.3308 18.9999 17.08 19H2.92C2.66925 18.9999 2.4277 18.9055 2.24322 18.7357C2.05875 18.5658 1.94481 18.3329 1.924 18.083L1.166 9H0V7H4V6C4 4.4087 4.63214 2.88258 5.75736 1.75736C6.88258 0.632141 8.4087 0 10 0ZM16.826 9H3.173L3.84 17H16.159L16.826 9ZM11 11V15H9V11H11ZM7 11V15H5V11H7ZM15 11V15H13V11H15ZM10 2C8.97376 2 7.98677 2.39444 7.24319 3.10172C6.4996 3.80901 6.05631 4.77504 6.005 5.8L6 6V7H14V6C14 4.97376 13.6056 3.98677 12.8983 3.24319C12.191 2.4996 11.225 2.05631 10.2 2.005L10 2Z"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            <div class="flex flex-col">
+                <img src="/ProperNutrition/src/assets/img/shop/card.png" alt="" class="w-full object-cover rounded-[30px] shadow-[0px_0px_20px_rgba(86,86,86,0.5)]">
+                <span class="font-bold lg:text-lg text-[10px] font-comfortaa lg:mt-[30px] mt-[15px]">Имбирные конфеты с апельсином</span>
+                <p class="lg:text-sm md:text-[10px] text-[8px] lg:mt-5 mt-[10px]"><span class="font-medium">Состав:</span> Подсушенный миндаль, медовые финики, пряный имбирь, апельсин, миндальные лепестки.<span class="font-medium"> Не содержат сахара!</span></p>
+                <ul class="flex lg:gap-x-[30px] gap-x-2 font-bold font-comfortaa lg:text-lg md:text-sm text-[10px] mt-[10px]">
+                    <li>Белки - 8</li>
+                    <li>Жиры - 20</li>
+                    <li>Углеводы - 36</li>
+                    <li>346 ккал</li>
+                </ul>
+                <div class="flex items-center justify-between w-full lg:mt-7 mt-[15px]">
+                    <div class="flex gap-x-[26px] items-center">
+                        <div class="flex lg:gap-x-4 gap-x-[10px]">
+                            <button class="countMinus flex justify-center items-center w-[30px] h-[30px] rounded-full bg-[#DEE6EE]">-</button>
+                            <input type="text" id="qty" value="1" class="qty font-bold text-center bg-transparent text-lightGreen lg:text-xl md:text-xs max-w-[40px] outline-none">
+                            <button class="countPlus flex justify-center items-center w-[30px] h-[30px] rounded-full bg-[#DEE6EE]">+</button>
+                        </div>
+                        <div class="text-lightGreen font-bold lg:text-xl md:text-xs">
+                            26 руб / 1 шт
+                        </div>
+                    </div>
+                    <a href="#" class="group justify-items-end hover:bg-lightGreen transition-all duration-300 flex justify-center items-center w-10 h-10 rounded-full bg-[#DEE6EE]">
+                        <svg width="20" height="19" class="fill-black group-hover:fill-milk transition-all duration-300" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M10 0C11.5913 0 13.1174 0.632141 14.2426 1.75736C15.3679 2.88258 16 4.4087 16 6V7H20V9H18.833L18.076 18.083C18.0552 18.3329 17.9413 18.5658 17.7568 18.7357C17.5723 18.9055 17.3308 18.9999 17.08 19H2.92C2.66925 18.9999 2.4277 18.9055 2.24322 18.7357C2.05875 18.5658 1.94481 18.3329 1.924 18.083L1.166 9H0V7H4V6C4 4.4087 4.63214 2.88258 5.75736 1.75736C6.88258 0.632141 8.4087 0 10 0ZM16.826 9H3.173L3.84 17H16.159L16.826 9ZM11 11V15H9V11H11ZM7 11V15H5V11H7ZM15 11V15H13V11H15ZM10 2C8.97376 2 7.98677 2.39444 7.24319 3.10172C6.4996 3.80901 6.05631 4.77504 6.005 5.8L6 6V7H14V6C14 4.97376 13.6056 3.98677 12.8983 3.24319C12.191 2.4996 11.225 2.05631 10.2 2.005L10 2Z"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="relative md:mb-[100px] mb-[60px]">
+        <div class="lg:flex hidden absolute bg-transparent w-[300px] h-[300px] rounded-full border-[20px] border-secondaryGreen/10 top-0 left-0"></div>
+        <div class="lg:flex hidden absolute bg-transparent w-[180px] h-[180px] rounded-full border-[15px] border-secondaryGreen/10 -bottom-10 left-[20%]"></div>
+        <h2 class="font-bold text-[30px] text-black font-comfortaa text-center">Фото блюд</h2>
+        <div class="flex w-full mt-[30px]">
+            <div class="swiper swiperGallery xl:pl-[150px] lg:pl-[160px] md:pl-[200px] pl-[80px] py-5">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img src="/ProperNutrition/src/assets/img/slider/s1.png" alt="" class="rounded-[30px] shadow-[0px_0px_20px_rgba(86,86,86,0.5)]"></div>
+                    <div class="swiper-slide"><img src="/ProperNutrition/src/assets/img/slider/s2.png" alt="" class="rounded-[30px] shadow-[0px_0px_20px_rgba(86,86,86,0.5)]"></div>
+                    <div class="swiper-slide"><img src="/ProperNutrition/src/assets/img/slider/s3.png" alt="" class="rounded-[30px] shadow-[0px_0px_20px_rgba(86,86,86,0.5)]"></div>
+                    <div class="swiper-slide"><img src="/ProperNutrition/src/assets/img/slider/s4.png" alt="" class="rounded-[30px] shadow-[0px_0px_20px_rgba(86,86,86,0.5)]"></div>
+                    <div class="swiper-slide"><img src="/ProperNutrition/src/assets/img/slider/s5.png" alt="" class="rounded-[30px] shadow-[0px_0px_20px_rgba(86,86,86,0.5)]"></div>
+                    <div class="swiper-slide"><img src="/ProperNutrition/src/assets/img/slider/s6.png" alt="" class="rounded-[30px] shadow-[0px_0px_20px_rgba(86,86,86,0.5)]"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="shadow-[0px_0px_30px_rgba(86,86,86,0.25)] bg-milk md:mb-[100px] mb-[50px] ">
+        <section class="container flex md:flex-row flex-col items-center justify-between md:py-10 py-[30px]">
+            <ul class="md:flex hidden flex-col lg:gap-y-4 md:gap-y-3 font-comfortaa lg:text-xl text-sm font-bold w-fit">
+                <li><a href="/ProperNutrition/index.html">Программы питания</a></li>
+                <li><a href="/ProperNutrition/pages/about.html">О нас</a></li>
+                <li><a href="/ProperNutrition/pages/lunch.html">Бизнес-ланчи</a></li>
+                <li><a href="/ProperNutrition/pages/shop.html">Gastro Shop</a></li>
+                <li><a href="/ProperNutrition/pages/blog.html">Блог</a></li>
+            </ul>
+            <a href="/ProperNutrition/index.html" class="flex flex-col items-center">
+                <img src="/ProperNutrition/src/assets/img/icon/logo_footer.png" alt="">
+                <span class="lg:text-xl text-sm text-black font-comfortaa -mt-4 text-center">сервис здорового питания</span>
+            </a>
+            <ul class="flex flex-col md:items-end items-center md:gap-y-4 gap-y-[10px] mt-7 md:mt-0 font-comfortaa lg:text-xl text-sm font-bold w-fit">
+                <li class="text-end md:flex hidden"><a href="#">Условия <span class="block">сотрудничества</span></a></li>
+                <li class="md:flex hidden"><a href="#">FAQ</a></li>
+                <li class="flex items-center gap-x-4">
+                    <a href="#"><img src="/ProperNutrition/src/assets/img/icon/insta.png" alt=""></a>
+                    <a href="#"><img src="/ProperNutrition/src/assets/img/icon/fb.png" alt=""></a>
+                    <a href="#"><img src="/ProperNutrition/src/assets/img/icon/ws.png" alt=""></a>
+                    <a href="#"><img src="/ProperNutrition/src/assets/img/icon/tg.png" alt=""></a>
+                </li>
+                <li><a href="tel:+38(068)9494919" class="text-lightGreen ">+38 (068) 949 - 49 - 19</a></li>
+            </ul>
+        </section>
+    </footer>
+
+    <!-- Боковое меню -->
+    <div class="btn_wrapper z-50 md:flex hidden items-center animate-pulse hover:animate-none justify-center w-[100px] h-[100px] fixed top-1/2 right-10 bg-lightGreen/80 rounded-full cursor-pointer">
+        <div class="group btn_side hover:bg-lightGreen flex items-center justify-center w-20 h-20 bg-milk rounded-full">
+            <svg width="36" height="36" class="fill-black group-hover:fill-milk" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g clip-path="url(#clip0_229_105)">
+                <path d="M10 3H14C16.1217 3 18.1566 3.84285 19.6569 5.34315C21.1571 6.84344 22 8.87827 22 11C22 13.1217 21.1571 15.1566 19.6569 16.6569C18.1566 18.1571 16.1217 19 14 19V22.5C9 20.5 2 17.5 2 11C2 8.87827 2.84285 6.84344 4.34315 5.34315C5.84344 3.84285 7.87827 3 10 3ZM12 17H14C14.7879 17 15.5681 16.8448 16.2961 16.5433C17.0241 16.2417 17.6855 15.7998 18.2426 15.2426C18.7998 14.6855 19.2417 14.0241 19.5433 13.2961C19.8448 12.5681 20 11.7879 20 11C20 10.2121 19.8448 9.43185 19.5433 8.7039C19.2417 7.97595 18.7998 7.31451 18.2426 6.75736C17.6855 6.20021 17.0241 5.75825 16.2961 5.45672C15.5681 5.15519 14.7879 5 14 5H10C8.4087 5 6.88258 5.63214 5.75736 6.75736C4.63214 7.88258 4 9.4087 4 11C4 14.61 6.462 16.966 12 19.48V17Z"/>
+                </g>
+                <defs>
+                <clipPath id="clip0_229_105">
+                <rect width="36" height="36" fill="white"/>
+                </clipPath>
+                </defs>
+            </svg>
+        </div>
+        <div class="relative">
+            <button class="btn_menu btn_profile hidden group  flex items-center justify-center w-10 h-10 bg-black rounded-full absolute -bottom-[100px] right-[20px]">
+                <svg width="24" height="24" class="group-hover:fill-lightGreen fill-milk" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_229_414)">
+                    <path d="M4 22C4 19.8783 4.84285 17.8434 6.34315 16.3431C7.84344 14.8429 9.87827 14 12 14C14.1217 14 16.1566 14.8429 17.6569 16.3431C19.1571 17.8434 20 19.8783 20 22H18C18 20.4087 17.3679 18.8826 16.2426 17.7574C15.1174 16.6321 13.5913 16 12 16C10.4087 16 8.88258 16.6321 7.75736 17.7574C6.63214 18.8826 6 20.4087 6 22H4ZM12 13C8.685 13 6 10.315 6 7C6 3.685 8.685 1 12 1C15.315 1 18 3.685 18 7C18 10.315 15.315 13 12 13ZM12 11C14.21 11 16 9.21 16 7C16 4.79 14.21 3 12 3C9.79 3 8 4.79 8 7C8 9.21 9.79 11 12 11Z"/>
+                    </g>
+                    <defs>
+                    <clipPath id="clip0_229_414">
+                    <rect width="24" height="24" fill="white"/>
+                    </clipPath>
+                    </defs>
+                </svg>
+            </button>
+            <button
+            data-te-toggle="modal"
+            data-te-target="#cartModal"
+            data-te-ripple-init
+            data-te-ripple-color="light"
+            class="btn_menu group hidden flex items-center justify-center w-10 h-10 bg-black rounded-full absolute -bottom-[75px] right-[80px]">
+                <svg width="24" height="24" class="group-hover:fill-lightGreen fill-milk" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_229_257)">
+                    <path d="M4 16V4H2V2H5C5.26522 2 5.51957 2.10536 5.70711 2.29289C5.89464 2.48043 6 2.73478 6 3V15H18.438L20.438 7H8V5H21.72C21.872 5 22.022 5.03466 22.1586 5.10134C22.2952 5.16801 22.4148 5.26495 22.5083 5.38479C22.6019 5.50462 22.6668 5.6442 22.6983 5.79291C22.7298 5.94162 22.7269 6.09555 22.69 6.243L20.19 16.243C20.1358 16.4592 20.011 16.6512 19.8352 16.7883C19.6595 16.9255 19.4429 17 19.22 17H5C4.73478 17 4.48043 16.8946 4.29289 16.7071C4.10536 16.5196 4 16.2652 4 16ZM6 23C5.46957 23 4.96086 22.7893 4.58579 22.4142C4.21071 22.0391 4 21.5304 4 21C4 20.4696 4.21071 19.9609 4.58579 19.5858C4.96086 19.2107 5.46957 19 6 19C6.53043 19 7.03914 19.2107 7.41421 19.5858C7.78929 19.9609 8 20.4696 8 21C8 21.5304 7.78929 22.0391 7.41421 22.4142C7.03914 22.7893 6.53043 23 6 23ZM18 23C17.4696 23 16.9609 22.7893 16.5858 22.4142C16.2107 22.0391 16 21.5304 16 21C16 20.4696 16.2107 19.9609 16.5858 19.5858C16.9609 19.2107 17.4696 19 18 19C18.5304 19 19.0391 19.2107 19.4142 19.5858C19.7893 19.9609 20 20.4696 20 21C20 21.5304 19.7893 22.0391 19.4142 22.4142C19.0391 22.7893 18.5304 23 18 23Z"/>
+                    </g>
+                    <defs>
+                    <clipPath id="clip0_229_257">
+                    <rect width="24" height="24" fill="white"/>
+                    </clipPath>
+                    </defs>
+                </svg>
+            </button>
+            <div class="profile_menu hidden flex flex-col items-end bg-milk p-4 rounded-[6px] absolute -bottom-[200px] right-4 shadow-[0px_0px_30px_rgba(86,86,86,0.25)]">
+                <button
+                data-te-dropdown-item-ref
+                data-te-toggle="modal"
+                data-te-target="#signinModal"
+                data-te-ripple-init
+                data-te-ripple-color="light"
+                class="hover:text-lightGreen font-bold transition-all duration-300">Вход</button>
+                <button 
+                data-te-dropdown-item-ref
+                data-te-toggle="modal"
+                data-te-target="#regModal"
+                data-te-ripple-init
+                data-te-ripple-color="light"
+                class="hover:text-lightGreen font-bold transition-all duration-300">Регистрация</button>
+            </div>
+        </div>
+        
+    </div>
+
+    <!-- Корзина модальное окно -->
+    <div
+        data-te-modal-init
+        class="fixed top-0 left-0 z-[1055] hidden h-full w-full overflow-y-auto overflow-x-hidden outline-none"
+        id="cartModal"
+        tabindex="-1"
+        aria-labelledby="exampleModalLabel"
+        aria-hidden="true"
+    >
+        <div
+        data-te-modal-dialog-ref
+        class="pointer-events-none relative top-[60px] mx-auto w-[98%] opacity-0 transition-all duration-300 ease-in-out lg:top-1/2 lg:-translate-y-1/2 lg:w-4/5"
+        >
+        <div
+            class=" pointer-events-auto relative flex w-full flex-col rounded-md border-none bg-transparent bg-clip-padding py-7 px-8 pb-20 text-current outline-none md:px-16"
+        >
+            <button
+            type="button"
+            class="absolute top-2 right-2 z-40"
+            data-te-modal-dismiss
+            aria-label="Close"
+            >
+            <img
+                src="/ProperNutrition/src/assets/img/icon/closeModal.png"
+                alt=""
+                class="w-full"
+            />
+            </button>
+            <form action="#" class="flex flex-col" data-te-modal-body-ref>
+                <div class="flex flex-col lg:flex-row gap-x-5 gap-y-5 w-full">
+                    <div class="flex flex-col gap-y-5 lg:w-1/2">
+                        <input type="text" name="name" class="hover:shadow-[0px_0px_20px_rgba(245,250,255,0.6)] focus:shadow-[0px_0px_20px_#F5FAFF] text-black placeholder:text-black placeholder:font-[400] outline-none font-bold text-base px-5 py-[10px] rounded-full w-full bg-[#F5FAFF]" placeholder="Имя">
+                        <input type="text" name="phone" class="hover:shadow-[0px_0px_20px_rgba(245,250,255,0.6)] focus:shadow-[0px_0px_20px_#F5FAFF] text-black placeholder:text-black placeholder:font-[400] outline-none font-bold text-base px-5 py-[10px] rounded-full w-full bg-[#F5FAFF]" placeholder="Телефон">
+                        <div class="flex md:flex-row flex-col gap-y-5 gap-x-[10px]">
+                            <input type="text" name="street" class="hover:shadow-[0px_0px_20px_rgba(245,250,255,0.6)] focus:shadow-[0px_0px_20px_#F5FAFF] text-black placeholder:text-black placeholder:font-[400] outline-none md:w-[60%] font-bold text-base px-5 py-[10px] rounded-full bg-[#F5FAFF]" placeholder="Улица">
+                            <div class="flex gap-x-[10px] md:w-[40%]">
+                                <input type="text" name="house" class="hover:shadow-[0px_0px_20px_rgba(245,250,255,0.6)] focus:shadow-[0px_0px_20px_#F5FAFF] text-black placeholder:text-black placeholder:font-[400] outline-none font-bold text-base px-5 py-[10px] rounded-full w-full bg-[#F5FAFF] grow" placeholder="Дом:">
+                                <input type="text" name="floor" class="hover:shadow-[0px_0px_20px_rgba(245,250,255,0.6)] focus:shadow-[0px_0px_20px_#F5FAFF] text-black placeholder:text-black placeholder:font-[400] outline-none font-bold text-base px-5 py-[10px] rounded-full w-full bg-[#F5FAFF] grow" placeholder="Этаж:">
+                            </div>
+                        </div>
+                        <div class="flex md:flex-row flex-col gap-y-5 gap-x-[10px]">
+                            <input type="text" name="apartment" class="hover:shadow-[0px_0px_20px_rgba(245,250,255,0.6)] focus:shadow-[0px_0px_20px_#F5FAFF] text-black placeholder:text-black placeholder:font-[400] outline-none font-bold text-base px-5 py-[10px] rounded-full w-full bg-[#F5FAFF] grow" placeholder="Квартира:">
+                            <input type="text" name="entrance" class="hover:shadow-[0px_0px_20px_rgba(245,250,255,0.6)] focus:shadow-[0px_0px_20px_#F5FAFF] text-black placeholder:text-black placeholder:font-[400] outline-none font-bold text-base px-5 py-[10px] rounded-full w-full bg-[#F5FAFF] grow" placeholder="Парадная:">
+                            <input type="text" name="intercom" class="hover:shadow-[0px_0px_20px_rgba(245,250,255,0.6)] focus:shadow-[0px_0px_20px_#F5FAFF] text-black placeholder:text-black placeholder:font-[400] outline-none font-bold text-base px-5 py-[10px] rounded-full w-full bg-[#F5FAFF] grow" placeholder="Домофон:">
+                        </div>
+                    </div>
+                    <div class="flex flex-col gap-y-5 lg:w-1/2">
+                        <select class="select" name="delivery">
+                            <option disabled>Время доставки</option>
+                            <option value="hour">В течение часа</option>
+                            <option value="30min">Через 30 мин</option>
+                            <option value="15min">15 мин</option>
+                        </select>
+                        <select class="select" name="pay">
+                            <option disabled>Способ оплаты</option>
+                            <option value="cash">Наличными курьеру</option>
+                            <option value="cards">Картой</option>
+                        </select>
+                        <select class="select" name="pay">
+                            <option disabled>Откуда узнали о нас</option>
+                            <option value="friens">От друзей</option>
+                            <option value="adv">Реклама в интернете</option>
+                            <option value="banner">Баннеры</option>
+                        </select>
+                        <select class="select" name="connect">
+                            <option disabled>Как с Вами связаться?</option>
+                            <option value="phone">Телефон</option>
+                            <option value="mail">Почта</option>
+                            <option value="nocon">Без связи</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="flex items-center gap-x-5 lg:my-[60px] md:my-10 my-[30px]">
+                    <input type="radio" id="agree" name="agree" class="">
+                    <label for="agree" class="font-bold text-milk font-comfortaa">Согласен с <a href="#" class="text-lightGreen">условиями сотрудничества</a></label>
+                </div>
+                <div class="flex lg:flex-row flex-col gap-x-10 gap-y-5">
+                    <div class="flex flex-col gap-y-[30px] xl:w-[20%] lg:w-[30%] md:w-[50%] w-full">
+                        <button type="submit" class="hover:bg-transparent hover:text-lightGreen transition-all duration-300 border-[3px] border-lightGreen flex items-center justify-center font-bold text-2xl shadow-[0px_0px_30px_#64D370] text-milk bg-lightGreen rounded-full py-[14px]">
+                            Заказать
+                        </button>
+                        <div class="flex items-center justify-center font-bold text-xl text-milk py-[14px] bg-transparent border-[3px] border-milk rounded-full shadow-[0px_0px_20px_#F5FAFF]">
+                            3 шт / 78 руб
+                        </div>
+                    </div>
+                    <div class="px-[30px] py-6 rounded-[30px] border-[3px] border-milk bg-[#020202]/40">
+                        <ul class="flex flex-col gap-y-5 font-bold text-milk">
+                            <li>Имбирные конфеты с апельсином - 1 шт.</li>
+                            <li>Имбирные конфеты с лимоном - 2 шт.</li>
+                        </ul>
+                    </div>
+                </div>
+            </form>
+        </div>
+        </div>
+    </div>
+
+    <!-- Выбор набора модальное окно -->
+    <div
+        data-te-modal-init
+        class="fixed top-0 left-0 z-[1055] hidden h-full w-full overflow-y-auto overflow-x-hidden outline-none"
+        id="orderModal"
+        tabindex="-1"
+        aria-labelledby="exampleModalLabel"
+        aria-hidden="true"
+    >
+        <div
+        data-te-modal-dialog-ref
+        class="pointer-events-none relative top-[60px] mx-auto w-[98%] opacity-0 transition-all duration-300 ease-in-out lg:top-1/2 lg:-translate-y-1/2 lg:w-4/5"
+        >
+        <div
+            class=" pointer-events-auto relative flex w-full flex-col rounded-md border-none bg-transparent bg-clip-padding py-7 px-8 pb-20 text-current outline-none md:px-16"
+        >
+            <button
+            type="button"
+            class="absolute top-2 right-2 z-40"
+            data-te-modal-dismiss
+            aria-label="Close"
+            >
+            <img
+                src="/ProperNutrition/src/assets/img/icon/closeModal.png"
+                alt=""
+                class="w-full"
+            />
+            </button>
+            <form action="#" class="flex flex-col" data-te-modal-body-ref>
+                <div class="flex flex-col lg:flex-row gap-x-5 gap-y-5 w-full">
+                    <div class="flex flex-col gap-y-5 lg:w-1/2">
+                        <input type="text" name="name" class="hover:shadow-[0px_0px_20px_rgba(245,250,255,0.6)] focus:shadow-[0px_0px_20px_#F5FAFF] text-black placeholder:text-black placeholder:font-[400] outline-none font-bold text-base px-5 py-[10px] rounded-full w-full bg-[#F5FAFF]" placeholder="Имя">
+                        <input type="text" name="phone" class="hover:shadow-[0px_0px_20px_rgba(245,250,255,0.6)] focus:shadow-[0px_0px_20px_#F5FAFF] text-black placeholder:text-black placeholder:font-[400] outline-none font-bold text-base px-5 py-[10px] rounded-full w-full bg-[#F5FAFF]" placeholder="Телефон">
+                        <input type="email" name="email" class="hover:shadow-[0px_0px_20px_rgba(245,250,255,0.6)] focus:shadow-[0px_0px_20px_#F5FAFF] text-black placeholder:text-black placeholder:font-[400] outline-none font-bold text-base px-5 py-[10px] rounded-full w-full bg-[#F5FAFF]" placeholder="Электронный адрес">
+                        <select class="select" name="programs">
+                            <option disabled>Программы питания</option>
+                            <option value="expressFit">EXPRESS FIT</option>
+                            <option value="slim">SLIM</option>
+                            <option value="fitness">FITNESS</option>
+                            <option value="balance">BALANCE</option>
+                            <option value="balancePlus">BALANCE +</option>
+                            <option value="strong">STRONG</option>
+                            <option value="maxfit">MAX FIT</option>
+                        </select>
+                        <select class="select" name="specialPrograms">
+                            <option disabled>Специальные программы</option>
+                            <option value="expressFit">EXPRESS FIT</option>
+                            <option value="slim">SLIM</option>
+                            <option value="fitness">FITNESS</option>
+                        </select>
+                        <div class="flex md:flex-row flex-col gap-y-5 gap-x-[10px]">
+                            <input type="text" name="street" class="hover:shadow-[0px_0px_20px_rgba(245,250,255,0.6)] focus:shadow-[0px_0px_20px_#F5FAFF] text-black placeholder:text-black placeholder:font-[400] outline-none md:w-[60%] font-bold text-base px-5 py-[10px] rounded-full bg-[#F5FAFF]" placeholder="Улица">
+                            <div class="flex gap-x-[10px] md:w-[40%]">
+                                <input type="text" name="house" class="hover:shadow-[0px_0px_20px_rgba(245,250,255,0.6)] focus:shadow-[0px_0px_20px_#F5FAFF] text-black placeholder:text-black placeholder:font-[400] outline-none font-bold text-base px-5 py-[10px] rounded-full w-full bg-[#F5FAFF] grow" placeholder="Дом:">
+                                <input type="text" name="floor" class="hover:shadow-[0px_0px_20px_rgba(245,250,255,0.6)] focus:shadow-[0px_0px_20px_#F5FAFF] text-black placeholder:text-black placeholder:font-[400] outline-none font-bold text-base px-5 py-[10px] rounded-full w-full bg-[#F5FAFF] grow" placeholder="Этаж:">
+                            </div>
+                        </div>
+                        <div class="flex md:flex-row flex-col gap-y-5 gap-x-[10px]">
+                            <input type="text" name="apartment" class="hover:shadow-[0px_0px_20px_rgba(245,250,255,0.6)] focus:shadow-[0px_0px_20px_#F5FAFF] text-black placeholder:text-black placeholder:font-[400] outline-none font-bold text-base px-5 py-[10px] rounded-full w-full bg-[#F5FAFF] grow" placeholder="Квартира:">
+                            <input type="text" name="entrance" class="hover:shadow-[0px_0px_20px_rgba(245,250,255,0.6)] focus:shadow-[0px_0px_20px_#F5FAFF] text-black placeholder:text-black placeholder:font-[400] outline-none font-bold text-base px-5 py-[10px] rounded-full w-full bg-[#F5FAFF] grow" placeholder="Парадная:">
+                            <input type="text" name="intercom" class="hover:shadow-[0px_0px_20px_rgba(245,250,255,0.6)] focus:shadow-[0px_0px_20px_#F5FAFF] text-black placeholder:text-black placeholder:font-[400] outline-none font-bold text-base px-5 py-[10px] rounded-full w-full bg-[#F5FAFF] grow" placeholder="Домофон:">
+                        </div>
+                    </div>
+                    <div class="flex flex-col gap-y-5 lg:w-1/2">
+                        <select class="select" name="delivery">
+                            <option disabled>Время доставки</option>
+                            <option value="hour">В течение часа</option>
+                            <option value="30min">Через 30 мин</option>
+                            <option value="15min">15 мин</option>
+                        </select>
+                        <select class="select" name="daysOrder">
+                            <option disabled>Количество дней заказа</option>
+                            <option value="one">1 день</option>
+                            <option value="seven">от 7 дней</option>
+                            <option value="fourteen">от 14 дней</option>
+                            <option value="thirty">от 30 дней</option>
+                            <option value="breakfast">Завтрак и ужин</option>
+                        </select>
+                        <select class="select" name="appliances">
+                            <option disabled>Мне нужны приборы</option>
+                            <option value="yes">Да, нужны</option>
+                            <option value="no">Нет, не нужно</option>
+                        </select>
+                        <select class="select" name="pay">
+                            <option disabled>Способ оплаты</option>
+                            <option value="cash">Наличными курьеру</option>
+                            <option value="cards">Картой</option>
+                        </select>
+                        <select class="select" name="know">
+                            <option disabled>Откуда узнали о нас</option>
+                            <option value="friens">От друзей</option>
+                            <option value="adv">Реклама в интернете</option>
+                            <option value="banner">Баннеры</option>
+                        </select>
+                        <input type="text" name="wishes" class="hover:shadow-[0px_0px_20px_rgba(245,250,255,0.6)] focus:shadow-[0px_0px_20px_#F5FAFF] text-black placeholder:text-black placeholder:font-[400] outline-none font-bold text-base px-5 py-[10px] rounded-full w-full bg-[#F5FAFF]" placeholder="Пожелания">
+                        <select class="select" name="connect">
+                            <option disabled>Как с Вами связаться?</option>
+                            <option value="phone">Телефон</option>
+                            <option value="mail">Почта</option>
+                            <option value="nocon">Без связи</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="flex items-center gap-x-5 lg:my-[60px] md:my-10 my-[30px]">
+                    <input type="radio" id="agree" name="agree" class="">
+                    <label for="agree" class="font-bold text-milk font-comfortaa">Согласен с <a href="#" class="text-lightGreen">условиями сотрудничества</a></label>
+                </div>
+                <button type="submit" class="hover:bg-transparent hover:text-lightGreen transition-all duration-300 border-[3px] border-lightGreen xl:w-[20%] lg:w-[30%] md:w-[50%] w-full flex items-center justify-center font-bold text-2xl shadow-[0px_0px_30px_#64D370] text-milk bg-lightGreen rounded-full py-[14px]">
+                Заказать
+                </button>
+            </form>
+        </div>
+        </div>
+    </div>
+
+    <!-- Вход-модальное окно -->
+    <div
+        data-te-modal-init
+        class="fixed top-0 left-0 z-[1055] hidden h-full w-full outline-none "
+        id="signinModal"
+        tabindex="-1"
+        aria-labelledby="exampleModalLabel"
+        aria-hidden="true"
+    >
+        <div
+        data-te-modal-dialog-ref
+        class="pointer-events-none relative md:top-[40%] top-[30%] mx-auto  opacity-0 transition-all duration-300 ease-in-out md:w-[500px] w-[90%]"
+        >
+        <div
+            class="shadow-[0_0.5rem_1rem_rgba(#000, 0.15)] pointer-events-auto relative flex w-full flex-col rounded-md border-none bg-white bg-clip-padding py-7 px-8 text-current  outline-none"
+        >
+            <button
+            type="button"
+            class="absolute top-2 right-2 z-40"
+            data-te-modal-dismiss
+            aria-label="Close"
+            >
+            <img
+                src="/ProperNutrition/src/assets/img/icon/closeModal.png"
+                alt=""
+                class="w-full"
+            />
+            </button>
+            <div class="flex flex-col gap-5" data-te-modal-body-ref>
+            <div class="flex flex-col">
+                <span class="text-[28px] font-bold">Вход</span>
+                <form action="#" class="flex flex-col mt-[30px]">
+                    <label for="name" class="text-lg font-bold font-comfortaa">Логин</label>
+                    <input type="text" id="name" name="name" class="py-[10px] px-5 bg-[#DEE6EE] rounded-full text-black outline-none" placeholder="Введите логин">
+                    <label for="psw" class="text-lg font-bold font-comfortaa mt-[30px]">Пароль</label>
+                    <input type="password" id="psw" name="psw" class="py-[10px] px-5 bg-[#DEE6EE] rounded-full text-black outline-none" placeholder="Введите пароль">
+                    <button type="submit" class="hover:text-lightGreen hover:bg-transparent border-[2px] border-lightGreen transition-all duration-300 text-milk flex justify-center items-center w-full mx-auto lg:mx-0 mt-[30px] font-bold lg:text-2xl md:text-xl text-base py-[14px] xl:px-[69px] xl:w-fit bg-lightGreen rounded-full shadow-[0px_0px_40px_rgba(86,86,86,0.3)] font-comfortaa">Войти</button>
+                </form>
+            </div>
+            </div>
+        </div>
+        </div>
+    </div>
+
+    <!-- Регистрация-модальное окно -->
+    <div
+        data-te-modal-init
+        class="fixed top-0 left-0 z-[1055] hidden h-full w-full overflow-y-auto overflow-x-hidden outline-none"
+        id="regModal"
+        tabindex="-1"
+        aria-labelledby="exampleModalLabel"
+        aria-hidden="true"
+    >
+        <div
+        data-te-modal-dialog-ref
+        class="pointer-events-none relative top-[30%] mx-auto opacity-0 transition-all duration-300 ease-in-out w-[90%] md:w-[500px]"
+        >
+        <div
+            class="shadow-[0_0.5rem_1rem_rgba(#000, 0.15)] pointer-events-auto relative flex w-full flex-col rounded-md border-none bg-white bg-clip-padding py-7 px-8 text-current shadow-lg outline-none"
+        >
+            <button
+            type="button"
+            class="absolute top-2 right-2 z-40"
+            data-te-modal-dismiss
+            aria-label="Close"
+            >
+            <img
+                src="/ProperNutrition/src/assets/img/icon/closeModal.png"
+                alt=""
+                class="w-full"
+            />
+            </button>
+            <div class="flex flex-col gap-5" data-te-modal-body-ref>
+            <div class="flex flex-col">
+                <span class="text-[28px] font-bold">Регистрация</span>
+                <form action="#" class="flex flex-col mt-[30px]">
+                    <label for="name" class="text-lg font-bold font-comfortaa">Логин</label>
+                    <input type="text" id="name" name="name" class="py-[10px] px-5 bg-[#DEE6EE] rounded-full text-black outline-none" placeholder="Введите логин">
+                    <label for="psw" class="text-lg font-bold font-comfortaa mt-[30px]">Пароль</label>
+                    <input type="password" id="psw" name="psw" class="py-[10px] px-5 bg-[#DEE6EE] rounded-full text-black outline-none" placeholder="Введите пароль">
+                    <label for="psw_conf" class="text-lg font-bold font-comfortaa mt-[30px]">Повтор пароля</label>
+                    <input type="password" id="psw_conf" name="psw_conf" class="py-[10px] px-5 bg-[#DEE6EE] rounded-full text-black outline-none" placeholder="Повторите пароль">
+                    <div class="flex items-center gap-x-5 mt-[30px]">
+                        <input type="radio" id="agree" name="agree" class="">
+                        <label for="agree" class="font-bold font-comfortaa">Согласен с <a href="#" class="text-lightGreen">условиями сотрудничества</a></label>
+                    </div>
+                    <button type="submit" class="hover:text-lightGreen hover:bg-transparent border-[2px] border-lightGreen transition-all duration-300 text-milk flex justify-center items-center w-full mx-auto lg:mx-0 mt-[30px] font-bold lg:text-2xl md:text-xl text-base py-[14px] xl:px-[69px] xl:w-fit bg-lightGreen rounded-full shadow-[0px_0px_40px_rgba(86,86,86,0.3)] font-comfortaa">Зарегистрироваться</button>
+                </form>
+            </div>
+            </div>
+        </div>
+        </div>
+    </div>
+
+<script src="/ProperNutrition/src/assets/libs/jquery.js"></script>
+<script src="/ProperNutrition/src/assets/libs/swiper.js"></script>
+<script src="/ProperNutrition/src/assets/libs/tailwindElements.js"></script>
+<script src="/ProperNutrition/src/assets/js/custom.js"></script>
+<script src="/ProperNutrition/src/assets/js/slider.js"></script>
+<script src="/ProperNutrition/src/js/main.js"></script>
+</body>
+</html>
