@@ -165,3 +165,20 @@ $('.select').each(function() {
         }
     });
 });
+
+
+// Админ-панель
+$('#toggleBarAdmin').click(() => {
+    if($('.leftBar').hasClass('w-[20%]')) {
+        $('.leftBar').removeClass('w-[20%]');
+        $('.leftBar').removeClass('px-10');
+        $('.leftBar').addClass('w-[100px]');
+    } else {
+        $('.leftBar').addClass('w-[20%]');
+        $('.leftBar').addClass('px-6');
+        $('.leftBar').removeClass('w-[100px]');
+    }
+    $('.leftBarText').each((t,text) => {
+        $(text).toggle();
+    });
+});
