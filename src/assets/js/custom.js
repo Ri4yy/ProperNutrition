@@ -184,3 +184,16 @@ $('#toggleBarAdmin').click(() => {
         $(text).toggle();
     });
 });
+
+// Добавление товара в магазин
+
+let category = $('#category').val();
+let form = $('.formShop');
+
+$('#category').select(() => {
+    if(category == 'Бизнес-ланч') {
+        form.html(' 123');
+    } else {
+        form.html(' 124');
+    }
+});
