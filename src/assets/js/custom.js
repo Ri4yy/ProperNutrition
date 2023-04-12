@@ -187,13 +187,19 @@ $('#toggleBarAdmin').click(() => {
 
 // Добавление товара в магазин
 
-let category = $('#category').val();
+let category = $('#category option:selected').val();
 let form = $('.formShop');
 
-$('#category').select(() => {
-    if(category == 'Бизнес-ланч') {
-        form.html(' 123');
-    } else {
-        form.html(' 124');
-    }
-});
+
+$('#category').change(() => {
+
+console.log(category);
+        if(category === "Бизнес-ланч") {
+            form.html('<div class="flex flex-col gap-x-10"><select name="categories" id="category" class="py-3 px-4 text-lg rounded-full bg-white shadow-[0px_4px_4px_rgba(0,0,0,0.04)] outline-none" required><option class="option">Категория</option><option class="option" value="Бизнес-ланч">Бизнес-ланч</option><option class="option" value="Полезные конфеты">Полезные конфеты</option></select><div class="flex relative"><img src="../src/assets/img/lunch/meat.png" alt="" class="rounded-[15px] mt-2"><input type="file" class="w-full h-full absolute opacity-0 cursor-pointer" title="Выберите изображение"></div><input type="text" name="title" class="py-[10px] px-5 mt-2 w-full bg-[#DEE6EE] rounded-full text-black outline-none focus:outline-[#64D370]" value="" placeholder="Название" required></div><textarea name="compound" class="ouline-none bg-[#DEE6EE] rounded-[15px] mt-6 h-[150px] focus:outline-[#64D370] px-3 py-2 text-sm resize-none"></textarea><div class="grid grid-cols-3 gap-x-4"><input type="text" name="protein" class="py-[6px] px-5 mt-2 w-full bg-[#DEE6EE] rounded-full text-black outline-none focus:outline-[#64D370]" value="" autocomplete="off" placeholder="Белки" required><input type="text" name="fats" class="py-[6px] px-5 mt-2 w-full bg-[#DEE6EE] rounded-full text-black outline-none focus:outline-[#64D370]" value="" autocomplete="off" placeholder="Жиры" required><input type="text" name="carbons" class="py-[6px] px-5 mt-2 w-full bg-[#DEE6EE] rounded-full text-black outline-none focus:outline-[#64D370]" value="" autocomplete="off" placeholder="Углеводы" required></div><div class="grid grid-cols-2 gap-x-4"><input type="text" name="cal" class="py-[6px] px-5 mt-2 w-full bg-[#DEE6EE] rounded-full text-black outline-none focus:outline-[#64D370]" value="" autocomplete="off" placeholder="Калории" required><input type="text" name="price" class="py-[6px] px-5 mt-2 w-full bg-[#DEE6EE] rounded-full text-black outline-none focus:outline-[#64D370]" value="" autocomplete="off" placeholder="Цена" required></div><button type="submit" class="flex justify-center items-center mt-4 py-1.5 text-lg font-medium w-full rounded-full bg-[#64D370] text-white hover:bg-[#4cb356] transition-all duration-300">Применить</button>');
+                
+            
+        } else {
+            form.html(' 124');
+        }
+    
+    });
