@@ -72,3 +72,10 @@ const swiperGallery = new Swiper('.swiperGallery', {
       type: 'bullets',
     },
   });
+
+  const swiperAdminBlog = new Swiper('.swiperAdminBlog', {
+    // Optional parameters
+    slidesPerView: 3,
+    loop: true,
+
+  });
